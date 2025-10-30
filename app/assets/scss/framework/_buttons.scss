@@ -1,0 +1,161 @@
+//
+// Buttons
+// --------------------------------------------------
+
+
+// Base styles
+// --------------------------------------------------
+
+.btn {
+  @include button-size($btn-padding-vertical-defalt, $btn-padding-horizontal-default, $btn-font-size, $btn-border-radius-default);
+  @include user-select(none);
+  background: $btn-default-bg;
+  border: 1px solid $btn-default-border;
+  color: $btn-default-color;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: $btn-font-weight;
+  line-height: $btn-line-height;
+  margin-bottom: 0; // For input.btn
+  outline: none;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transition: background .3s ease-in-out, color .3s ease-in-out, border .3s ease-in-out;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  &:active,
+  &.is-active,
+  &:hover {
+    border-color: $btn-default-hover-border;
+    color: $btn-default-color;
+    text-decoration: none;
+  }
+
+  &:active,
+  &.is-active {
+    @include box-shadow(inset 0 3px 5px $color-black-opacity-125);
+  }
+
+  &.is-disabled,
+  &[disabled] {
+    @include box-shadow(none);
+    @include opacity(.65);
+    cursor: $cursor-disabled;
+  }
+
+  span {
+    display: inline-block;
+    padding-left: 35px;
+    position: relative;
+  }
+
+  .fa {
+    font-size: 16px;
+    left: 0;
+    margin-top: -8px;
+    position: absolute;
+    top: 50%;
+  }
+}
+
+.btn-block {
+  width: 100%;
+}
+
+a {
+
+  &.btn {
+
+    &.is-disabled {
+      pointer-events: none; // Future-proof disabling of clicks on `<a>` elements
+    }
+  }
+}
+
+// Alternate buttons
+// --------------------------------------------------
+
+.btn-primary {
+  @include button-variant($btn-primary-color, $btn-primary-hover-color, $btn-primary-bg, $btn-primary-hover-bg, $btn-primary-border, $btn-primary-hover-border);
+}
+
+.btn-second {
+  @include button-variant($btn-second-color, $btn-second-hover-color, $btn-second-bg, $btn-second-hover-bg, $btn-second-border, $btn-second-hover-border);
+}
+
+.btn-third {
+  @include button-variant($btn-third-color, $btn-third-hover-color, $btn-third-bg, $btn-third-hover-bg, $btn-third-border, $btn-third-hover-border);
+}
+
+//// Success appears as green
+//.btn-success {
+//  @include button-variant($btn-success-color, $btn-success-bg, $btn-success-border);
+//}
+//
+//// Info appears as blue-green
+//.btn-info {
+//  @include button-variant($btn-info-color, $btn-info-bg, $btn-info-border);
+//}
+//
+//// Warning appears as orange
+//.btn-warning {
+//  @include button-variant($btn-warning-color, $btn-warning-bg, $btn-warning-border);
+//}
+//
+//// Danger and error appear as red
+//.btn-danger {
+//  @include button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border);
+//}
+
+
+// Link buttons
+// -------------------------
+
+// Make a button look and behave like a link
+.btn-link {
+  border-radius: 0;
+  color: $color-link;
+  font-weight: normal;
+
+  &,
+  &:active,
+  &.is-active,
+  &[disabled] {
+    @include box-shadow(none);
+    background-color: transparent;
+  }
+
+  &,
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: transparent;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: transparent;
+    color: $color-link-hover;
+    text-decoration: underline;
+  }
+
+  &[disabled] {
+    &:hover,
+    &:focus {
+      color: $btn-link-disabled-color;
+      text-decoration: none;
+    }
+  }
+}
+
+// Button size
+// --------------------------------------------------
+.btn-small {
+  @include button-size($btn-padding-vertical-small, $btn-padding-horizontal-small, $btn-font-size-small, $btn-border-radius-small);
+}
+
+.btn-large {
+  @include button-size($btn-padding-vertical-large, $btn-padding-horizontal-large, $btn-font-size-large, $btn-border-radius-large);
+}

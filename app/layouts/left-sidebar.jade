@@ -1,0 +1,16 @@
+include ../components/mixin.jade
+doctype html
+html(lang="en")
+  head
+    include ../components/head.jade
+  body
+    .wrapper
+      block header
+      = '\n'
+      block content
+      = '\n'
+      block sidebar
+      = '\n'
+      block footer
+    ///.wrapper
+    include ../components/script.jade

@@ -1,0 +1,165 @@
+extends layouts/full-width.jade
+block head
+  +head(
+  'VPBANK PHỐI HỢP AMAZON',
+  'description',
+  'keywords',
+  'description_social',
+  'image_social',
+  'url_social',
+  'type_social'
+  )
+block content
+  section.panel-banner
+    .container
+      .banner-content
+        h1.banner-heading VPBANK PHỐI HỢP AMAZON
+        p.banner-description Tặng doanh nghiệp gói Giải Pháp Số Hóa Hệ Thống trị giá 3.000USD
+        .banner-deadline Đến 31/12/2020
+  ///.panel-banner
+  = '\n'
+
+  section.panel-sponsor
+    .container
+      .sponsor-content
+        .heading.sponsor-heading
+          h2.heading-title 
+            span Tài trợ
+            span Chuyển đổi dữ liệu lên internet với công nghệ điện toán đám mây AWS
+        ul.sponsor-checklist
+          li Miễn phí đào tạo công nghệ điện toán đám mây &nbsp; các giải pháp Công nghệ thông tin
+          li Miễn phí tư vấn chuyển đổi dữ liệu lên AWS (bao gồm tất cả ứng dụng Window/Sap)
+          li Tặng 100USD vào tài khoản Amazon Web Service
+          li Hoàn tiền không giới hạn từ 3% - 5%  khi thanh toán bằng thẻ tín dụng/ghi nợ VPBANK
+          li Tặng 3 tháng gói quản lý hạ tầng trên AWS (Chỉ áp dụng cho khách hàng VPBANK)
+
+        .sponsor-feature 
+          span Tính năng
+        ul.sponsor-checklist
+          li Lưu trữ thông tin tại các máy chủ lên internet 1 cách an toàn
+          li Cấu hình linh hoạt tương thích với nhu cầu của Doanh nghiệp
+          li Cắt giảm chi phí đầu tư hạ tầng ban đầu và thanh toán linh hoạt theo từng tháng
+  ///.panel-sponsor
+  = '\n'
+
+  section.panel-feature
+    .container
+      .heading.feature-heading
+        h2.heading-title 
+          span Tài trợ phần mềm
+          span Tài trợ phần mềm nâng cao trải nghiệm người dùng (FacePass)
+      .row.feature-list
+        +feature-item('assets/images/data/icon-152x152-1.jpg', 'Công nghệ nhận diện khuôn mặt nâng cao chất lượng dịch vụ CSKH')
+        +feature-item('assets/images/data/icon-152x152-2.jpg', 'Tự động phân nhóm và đề xuất sản phẩm phù hợp với khách hàng')
+        +feature-item('assets/images/data/icon-152x152-3.jpg', 'Cho phép xây dựng các chương trình KHÁCH HÀNG THÀNH VIÊN ')
+        +feature-item('assets/images/data/icon-152x152-4.jpg', 'Lưu vết, phân tích hành vi để tạo ra dữ liệu khách hàng tiềm năng')
+        +feature-item('assets/images/data/icon-152x152-5.jpg', 'Số hóa dữ liệu giúp doanh nghiệp dễ dàng đưa ra quyết định trong kinh doanh')
+        +feature-item('assets/images/data/icon-152x152-6.jpg', 'Giao diện đơn giản, vận hành dễ dàng, tiết kiệm chi phí')
+
+  ///.panel-feature
+  = '\n'
+
+  section.panel-solution
+    .container
+      .heading.solution-heading
+        h2.heading-title
+          span Tài trợ các giải pháp
+          span Quản trị cho doanh nghiệp Bitrix24
+        p.heading-summary Phần mềm được cung cấp bởi Đối tác chiến lược của AMAZON – Công ty LET JSC
+      
+      .row.solution-content
+        +solution-item('assets/images/data/article-746x464-1.jpg', 'Bitrix24', 'Phần mềm bao gồm các module về CRM, marketing, workflow, giao tiếp, quản trị dự án, giao việc và theo dõi tiến độ, lịch làm việc, lưu trữ tài liệu (drive)...')
+        +solution-item('assets/images/data/article-746x464-2.jpg', 'Bitrix24 for Real Estate', 'Phần mềm quản lý nghiệp vụ Sàn Bất Động Sản - tích hợp với tổng đài 3CX: Quy trình bán hàng, lock/unlock căn, đặt cọc, thanh toán, chia hoa hồng, nhân sự, chấm công, bảng lương, kiểm soát thu chi...')
+      p.solution-note 
+        | * Miễn phí 2 buổi đào tạo và dùng thử 1 tháng <br/>
+        | * Giảm 25% các tháng tiếp theo nếu khách hàng có nhu cầu sử dụng tiếp (Không bắt buộc khách hàng sử dụng tiếp nếu như phần mềm không phù hợp với nhu cầu)
+
+  ///.panel-solution
+  = '\n'
+  section.panel-service
+    .container
+      .heading.service-heading
+        h2.heading-title
+          span Tài trợ phần mềm
+          span Quản lý nghiệp vụ kinh doanh KIU BMP
+        p.heading-summary (Phần mềm được cung cấp bởi Đối tác chiến lược của AMAZON – Công ty KIU Global)
+      .row.service-list
+        +service-item('assets/images/data/icon-146x146-1.png', 'Kiểm soát đơn hàng, tạo hóa đơn bán hàng và ghi nhận bút toán')
+        +service-item('assets/images/data/icon-146x146-2.png', 'Quản lý yêu cầu báo giá, so sánh giá và tạo bảng giá nhà cung cấp')
+        +service-item('assets/images/data/icon-146x146-3.png', 'Chấm công tự động, tạo bảng lương và tra cứu dữ liệu chi tiết')
+        +service-item('assets/images/data/icon-146x146-4.png', 'Đối soát chi phí và dự trù các khoản phải chi trong tương lai')
+        +service-item('assets/images/data/icon-146x146-5.png', 'Kiểm soát số lượng tồn kho, tránh tình trạng tắc nghẽn hàng hóa')
+        +service-item('assets/images/data/icon-146x146-6.png', 'Xem báo cáo tài chính động, xuất file và tạo mẫu phù hợp')
+  ///.panel-service
+  = '\n'
+  
+  section.panel-consult
+    .container
+      .consult-content
+        .heading.consult-heading
+          h2.heading-title 
+            span Tài trợ
+            span Tư vấn và đào tạo chuyên sâu về Amazon Web Services
+          p.heading-summary Được cung cấp bởi Đối tác chiến lược của AMAZON – Công ty TECHX
+        ul.consult-checklist
+          li Đánh giá, may đo lộ trình và kế hoạch chuyển đổi lên cloud cụ thể, phù hợp với hiện trạng và mục tiêu của từng doanh nghiệp 
+          li Triển khai rà soát, giám sát, báo cáo định kỳ, cảnh báo các rủi ro
+          li Đề xuất và thực hiện các công tác tối ưu hóa hệ thống, tối ưu hóa chi phí
+          li Đào tạo miễn phí lớp công nghệ điện toán đám mây cơ bản
+          li Tặng voucher từ 5.000.000VNĐ – 7.000.000VNĐ khi tham gia lớp học AWS chuyên sâu
+  ///.panel-consult
+  = '\n'
+  section.panel-promotion
+    .container
+      .heading.promotion-heading
+        h2.heading-title 
+          span Quy trình nhận khuyến mãi
+        p.heading-summary (Doanh nghiệp có thể lựa chọn tham gia hoặc không tham gia lớp học)
+      .row.promotion-content        
+        .col-xs-12.col-sm-6
+          +promotion-item(1, 'Đăng ký nhận khuyến mãi')
+          +promotion-item(2, 'Đại diện Amazon Web Services và đối tác gọi điện tư vấn dịch vụ trong vòng 24 giờ')
+          +promotion-item(3, 'Tham gia lớp đào tạo công nghệ điện toán đám mây do AMAZON trực tiếp hướng dẫn (1 ngày)')
+        .col-xs-12.col-sm-6
+          +promotion-item(4, 'Tham gia lớp đào tạo Các giải pháp CNTT dựa trên yêu cầu kinh doanh (1 ngày)')
+          +promotion-item(5, 'Tạo tài khoản AWS & nhận 100USD ')
+          +promotion-item(6, 'Đối tác của Amazon Web Services tiến hành cài đặt và tư vấn các phần mềm miễn phí mà Doanh nghiệp đã đăng ký trước đó')
+  ///.panel-promotion
+  = '\n'
+  section.panel-register
+    .container
+      .heading.register-heading
+        h2.heading-title 
+          span Đăng ký ngay
+      .register-content
+        form#register-form(action="#")
+          .form-group
+            input.form-control(type="text", name="company", placeholder="Tên Doanh Nghiệp")
+          .form-group
+            input.form-control(type="text", name="tax", placeholder="Mã số thuế")
+          .form-group
+            input.form-control(type="text", name="name", placeholder="Tên người liên hệ")
+          .form-group
+            input.form-control(type="number", name="tel", placeholder="Số đện thoại người liên hệ")
+          .form-group
+            input.form-control(type="email", name="email", placeholder="Email người liên hệ")
+          .form-group
+            select.form-control(name="package")
+              option(value="") Yêu cầu gói tài trợ
+              option(value="a") Gói A
+              option(value="b") Gói B
+          .form-group
+            label.form-checkbox
+              | Đồng ý nhận gói tiếp sức SỐ HÓA DOANH NGHIỆP do VPBank & Amazon cung cấp
+              input(type="checkbox", name="agree", value="true")
+          .form-handle
+            button.btn.btn-submit#btn-submit(type="submit") 
+              span.loading
+              | ĐĂNG KÝ NGAY
+  ///.panel-register
+  = '\n'
+block script
+  | <!--build:js assets/js/vendor/jquery.validate.min.js-->
+  | <script src="bower_components/jquery-validation/dist/jquery.validate.min.js"></script>
+  | <!-- endbuild -->
+

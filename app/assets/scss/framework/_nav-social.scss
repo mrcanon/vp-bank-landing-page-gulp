@@ -1,0 +1,41 @@
+.nav-social {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  font-size: 0;
+  text-align: center;
+
+  li {
+    display: inline-block;
+    
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+
+  a {
+    display: block;
+    @include square(26px);
+    transition: opacity .2s;
+    text-indent: 100%;
+
+    &:hover {
+      opacity: 0.5;
+      text-decoration: none;
+    }
+  }
+
+  
+  .icon-global {
+    @include sprite('-32px 0')
+  }
+
+  .icon-facebook {
+    @include sprite('0 0')
+  }
+
+  .icon-mail {
+    @include sprite('-64px 0')
+  }
+}

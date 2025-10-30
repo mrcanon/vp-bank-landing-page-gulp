@@ -1,0 +1,29 @@
+.loading {
+  display: none;
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  margin-top: -10px;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+
+  border-radius: 50%;
+  border: solid transparent 2px;
+  border-top: solid #fff 2px;
+  border-left: solid #fff 2px;
+  animation: loader 1s linear infinite;
+
+  .btn-loading & {
+    display: inline-block;
+  }
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

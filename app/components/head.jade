@@ -1,0 +1,24 @@
+meta(charset="utf-8")
+block head
+meta(http-equiv="X-UA-Compatible" content="IE=edge")
+meta(name="format-detection" content="telephone=no")
+meta(name="viewport" content="width=device-width, initial-scale=1")
+meta(name="apple-mobile-web-app-capable" content="yes")
+meta(name="apple-mobile-web-app-status-bar-style" content="black")
+link(rel="shortcut icon", href="assets/images/favicon.png")
+block css 
+= "\n"
+| <!--build:css assets/css/style.css-->
+| <link rel="stylesheet" href="assets/css/styles.css">
+= "\n"
+| <!-- endbuild -->
+= "\n"
+<!--[if lt IE 10]>
+link(rel="stylesheet" href="assets/css/ie.css")
+= "\n"
+| <![endif]-->
+= "\n"
+<!--[if lt IE 9]>
+script(src="assets/js/vendor/html5-3.6-respond-1.4.2.min.js")
+= "\n"
+| <![endif]-->

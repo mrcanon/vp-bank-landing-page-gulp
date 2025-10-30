@@ -1,0 +1,22 @@
+@mixin nav-menu-color ($color-link, $link-hover-color) {
+  .nav-menu {
+
+    > li {
+
+      > a {
+        color: $color-link;
+
+        &:hover {
+          color: $link-hover-color;
+        }
+      }
+
+      &.current-menu-item {
+
+        > a {
+          color: $link-hover-color;
+        }
+      }
+    }
+  }
+}

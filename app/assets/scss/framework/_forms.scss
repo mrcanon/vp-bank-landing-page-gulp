@@ -1,0 +1,190 @@
+//
+// Forms
+// --------------------------------------------------
+
+
+// Normalize non-controls
+//
+// Restyle and baseline non-control form elements.
+
+fieldset {
+  border: 0;
+  margin: 0;
+  min-width: 0;
+  padding: 0;
+}
+
+legend {
+  border: 0;
+  border-bottom: 1px solid $legend-border-color;
+  color: $legend-color;
+  display: block;
+  font-size: ($base-font-size * 1.5);
+  line-height: inherit;
+  margin-bottom: $line-height-computed;
+  padding: 0;
+  width: 100%;
+}
+
+label {
+  display: inline-block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  max-width: 100%; // Force IE8 to wrap long content (see https://github.com/twbs/bootstrap/issues/13141)
+}
+
+
+// Normalize form controls
+//
+// While most of our form styles require extra classes, some basic normalization
+// is required to ensure optimum display with or without those classes to better
+// address browser inconsistencies.
+
+input {
+
+  // Override content-box in Normalize (* isn't specific enough)
+  &[type='search'] {
+    @include appearance;
+    @include box-sizing(border-box);
+  }
+
+  // Position radios and checkboxes better
+  &[type='radio'],
+  &[type='checkbox'] {
+    line-height: normal;
+    margin: 4px 0 0;
+
+    &[disabled] {
+      cursor: $cursor-disabled;
+    }
+  }
+
+  &[type='file'] {
+    display: block;
+  }
+
+  // Make range inputs behave like textual form controls
+  &[type='range'] {
+    display: block;
+    width: 100%;
+  }
+}
+
+// Make multiple select elements height not fixed
+select {
+
+  &[multiple],
+  &[size] {
+    height: auto;
+  }
+}
+
+// Adjust output element
+output {
+  color: $input-color;
+  display: block;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  padding-top: ($padding-base-vertical + 1);
+}
+
+// Common form controls
+.form-control {
+  @include border-radius($input-border-radius);
+  @include box-shadow(inset 0 0 5px rgba(0, 0, 0, 0.6));
+  @include form-control-focus;
+  @include ms-expand;
+  @include placeholder;
+  @include transition(background ease-in-out .15s, box-shadow ease-in-out .15s);
+  background-color: $input-bg;
+  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  border: 1px solid #9c9c9c;
+  color: $input-color;
+  display: block;
+  font-size: $base-font-size;
+  height: $input-height-base; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
+  line-height: $base-line-height;
+  padding: $padding-base-vertical $padding-base-horizontal;
+  width: 100%;
+
+  // Disabled and read-only inputs
+  //
+  // HTML5 says that controls under a fieldset > legend:first-child won't be
+  // disabled if the fieldset is disabled. Due to implementation difficulty, we
+  // don't honor that edge case; we style them as disabled anyway.
+  &[disabled],
+  &[readonly] {
+    background-color: $input-bg-disabled;
+    opacity: 1; // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655
+  }
+
+  &[disabled] {
+    cursor: $cursor-disabled;
+  }
+
+  // [converter] extracted textarea& to textarea.form-control
+}
+
+// Reset height for `textarea`s
+textarea {
+
+  &.form-control {
+    height: auto;
+  }
+}
+
+// Form groups
+//
+// Designed to help with the organization and spacing of vertical forms. For
+// horizontal forms, use the predefined grid classes.
+
+.form-group {
+  margin-bottom: $form-group-margin-bottom;
+}
+
+.form-error {
+  border-color: #ff5c5c;
+}
+
+label.form-error {
+  display: block;
+  padding-top: 5px;
+  color: #ff5c5c;
+  font-weight: normal;
+}
+
+.form-checkbox {
+  display: inline-block;
+  font-weight: normal;
+  padding-left: 30px;
+  position: relative;
+
+  input {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+
+.btn-submit {
+  position: relative;
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  outline: none;
+  background: #038345;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 16px;
+  height: 40px;
+  padding: 5px 20px;
+  border-radius: 20px;
+  min-width: 206px;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}

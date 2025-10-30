@@ -1,0 +1,30 @@
+//Background By Sprite Images
+@mixin sprite($position, $bg-color: transparent, $size: 160px 74px){
+	background: #{$bg-color} url(../images/sprite.png) no-repeat #{$position};
+	background-size: #{$size};
+}
+// Line height sizes (primary sizing in `rem` units with a fallback of `px`)
+// Example usage @include line-height(22);
+@mixin line-height ($size, $font: $base-font-size) {
+	line-height: $size / $font;
+	//line-height: $remValue + rem;
+}
+
+// Covering Mixin
+@mixin coverer {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+// Font awesome
+@mixin fontawesome($font-size: inherit) {
+	display: inline-block;
+	font: normal normal normal 14px/1 FontAwesome;
+	font-size: #{$font-size};
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
